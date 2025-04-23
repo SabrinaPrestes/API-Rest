@@ -15,7 +15,7 @@ import med.voll.api.endereco.Endereco;
 @EqualsAndHashCode(of = "id")
 public class Medico {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
     private String nome;
@@ -24,6 +24,7 @@ public class Medico {
 
     @Enumerated(EnumType.STRING)
     private Especialidade especialidade;
+
     @Embedded
     private Endereco endereco;
 
